@@ -1,0 +1,24 @@
+.container {
+  max-width: 1080px;
+  margin: auto;
+  color: #eee;
+}
+
+.container h1 {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.link-icon {
+  display: inline-block;
+  margin-left: 0.2rem;
+  width: 10px;
+}
+
+.section {
+  margin-top: 1rem;
+}
+
+.section h3 {
+  margin-top: 1rem;
+}

@@ -1,0 +1,45 @@
+.navlink {
+  text-decoration: none;
+  color: #eee;
+  transition: 0.3s color ease;
+}
+
+.navlink:hover {
+  color: #ccc;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(110, 131, 251);
+  transition: 0.3s color ease;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: rgb(84, 100, 194);
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  background-color: transparent;
+  color: #eee;
+  font-family: inherit;
+  border: 2px solid #eee;
+  border-radius: 5px;
+  font-size: 1em;
+  padding: 0.4em 2em;
+  transition: 0.3s all ease;
+  margin: 0.5em 0;
+}
+
+.button:hover {
+  background-color: #eee;
+  color: black;
+}
+
+@media screen and (max-width: 920px) {
+  .info button {
+    font-size: 1em;
+  }
+}

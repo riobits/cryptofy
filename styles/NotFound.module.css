@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #eee;
+  text-align: center;
+  height: calc(100vh - 90px);
+}
+
+.container h1,
+.container h2,
+.container p {
+  margin: 0.5rem;
+}
