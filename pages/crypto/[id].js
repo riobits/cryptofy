@@ -17,7 +17,7 @@ export default function CurrencyInfo({ currency }) {
       <div className={styles.container}>
         <Link href='/crypto'>
           <a>
-            <button className={urilsStyles.button}>&#11164; Back</button>
+            <button className={urilsStyles.button}>Back</button>
           </a>
         </Link>
         <br />
@@ -59,7 +59,6 @@ export default function CurrencyInfo({ currency }) {
 
 export async function getStaticProps(context) {
   try {
-    console.log(process.env.NAME)
     const options = {
       headers: {
         'x-rapidapi-host': process.env.RAPID_HOST,
