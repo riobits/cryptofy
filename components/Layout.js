@@ -17,7 +17,7 @@ export default function Layout({ children }) {
         />
         <meta
           property='og:image'
-          content='http://localhost:3000/thumbnail.png'
+          content='https://cryptofy.vercel.app/thumbnail.png'
         />
         <link rel='icon' href='/favicon.ico' />
       </Head>
