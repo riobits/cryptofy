@@ -20,7 +20,9 @@ export default function CryptoItem({ imageUrl, name, price, change }) {
         <div className={styles.title}>
           <p className={styles.name}>{name}</p>
           <p className={styles.price}>
-            <span>${Number(price).toLocaleString('en-US')}</span>{' '}
+            <span>
+              ${price > 1 ? Number(price).toLocaleString('en-US') : price}
+            </span>{' '}
             <span className={styles[upOrDown]}>
               <div className={utilsStyles.icon}>
                 {upOrDown === 'up' ? (
