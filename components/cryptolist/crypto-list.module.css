@@ -1,17 +1,9 @@
 .container {
-  max-width: 920px;
-  margin: 1rem auto;
-  background-color: #0c0d17;
-  border-radius: 20px;
-  padding: 2rem;
+  max-width: 1080px;
+  margin: auto;
   font-family: 'Poppins', sans-serif;
-}
-
-.container .info {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 1rem;
-  color: #eee;
+  background-color: #0c0d17;
+  border-radius: 1rem;
 }
 
 .container ul {
@@ -20,27 +12,35 @@
 
 .item {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  text-align: center;
+  align-items: center;
   color: #eee;
-  padding: 1em;
-  border-bottom: 1px solid #151519;
+  padding: 1rem;
+  border-bottom: 1px solid #131524;
+}
+
+.item .arrow {
+  color: #aaa;
+  margin: 0.2rem;
 }
 
 .item .currency {
   display: flex;
-  align-items: center;
-  width: 50%;
 }
 
-.item .price,
-.item .change {
-  width: 25%;
+.item .currency .img {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.item .title {
+  display: flex;
+  flex-direction: column;
 }
 
 .item .name {
-  margin: 0 1rem;
+  font-weight: 600;
 }
 
 .item .up {
@@ -51,33 +51,5 @@
   color: salmon;
 }
 
-.currency-title {
-  width: 50%;
-}
-
-.price-title {
-  width: 25%;
-  text-align: center;
-}
-
-.change-title {
-  width: 25%;
-  text-align: center;
-}
-
 @media screen and (max-width: 920px) {
-  .change-title {
-    display: none;
-  }
-
-  .item .change {
-    display: none;
-  }
-
-  .currency-title,
-  .price-title,
-  .item .change,
-  .item .price {
-    width: auto;
-  }
 }

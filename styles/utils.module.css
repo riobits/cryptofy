@@ -38,6 +38,12 @@
   color: black;
 }
 
+.icon {
+  display: inline-flex;
+  width: 10px;
+  align-items: center;
+}
+
 @media screen and (max-width: 920px) {
   .info button {
     font-size: 1em;

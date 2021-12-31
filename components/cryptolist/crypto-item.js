@@ -1,5 +1,12 @@
 import Image from 'next/image'
 import styles from './crypto-list.module.css'
+import utilsStyles from '../../styles/utils.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faCaretUp,
+  faCaretDown,
+  faAngleRight,
+} from '@fortawesome/free-solid-svg-icons'
 
 export default function CryptoItem({ imageUrl, name, price, change }) {
   const upOrDown = change >= 0 ? 'up' : 'down'
@@ -10,13 +17,26 @@ export default function CryptoItem({ imageUrl, name, price, change }) {
         <div className={styles.img}>
           <Image src={imageUrl} alt='cryptocurrency' width={35} height={35} />
         </div>
-        <span className={styles.name}>{name}</span>
+        <div className={styles.title}>
+          <p className={styles.name}>{name}</p>
+          <p className={styles.price}>
+            <span>${Number(price).toLocaleString('en-US')}</span>{' '}
+            <span className={styles[upOrDown]}>
+              <div className={utilsStyles.icon}>
+                {upOrDown === 'up' ? (
+                  <FontAwesomeIcon icon={faCaretUp} />
+                ) : (
+                  <FontAwesomeIcon icon={faCaretDown} />
+                )}
+              </div>{' '}
+              {Math.abs(change)}%
+            </span>
+          </p>
+        </div>
       </div>
-      <p className={styles.price}>${Number(price).toLocaleString('en-US')}</p>
-      <span className={`${styles[upOrDown]} ${styles.change}`}>
-        {upOrDown === 'up' && '+'}
-        {change}%
-      </span>
+      <div className={`${utilsStyles.icon} ${styles.arrow}`}>
+        <FontAwesomeIcon icon={faAngleRight} />
+      </div>
     </li>
   )
 }
